@@ -12,6 +12,17 @@ app.get("/", (req, res) => {
     res.sendFile(__dirname + "/index.html");
 });
 
+app.post("/register", (req, res) => { 
+  const firstName = req.body.firstName;
+  const gender = req.body.gender;
+
+  console.log(firstName);
+  console.log(gender);
+
+  res.send('Form submitted successfully');
+});
+
+
 // Start the server
 app.listen(port, () => {
   console.log(`Server listening on port: ${port}`);

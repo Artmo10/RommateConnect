@@ -16,86 +16,86 @@
         <section class="titleRegister">
             <h1 class="titleRC">Registration</h1>
         </section>
-        <form action="#" class="registerForm">
+        <form action="/register" method="post" class="registerForm">
             <div class="row mb-4 ">
                 <div class="col-auto labelRegisterForm">
-                    <label for="" class="col-form-label">First Name</label>
+                    <label for="firstName" class="col-form-label">First Name</label>
                 </div>
                 <div class="col-auto">
-                    <input type="text" class="form-control">
+                    <input type="text" name="firstName" class="form-control" required>
                 </div>
             </div>
             <div class="row mb-4">
                 <div class="col-auto labelRegisterForm">
-                    <label for="" class="col-form-label">Last Name</label>
+                    <label for="lastName" class="col-form-label">Last Name</label>
                 </div>
                 <div class="col-auto">
-                    <input type="text" class="form-control">
+                    <input type="text" name="lastName" class="form-control" required>
                 </div>
             </div>
             <div class="row mb-4">
                 <div class="col-auto labelRegisterForm">
-                    <label for="" class="col-form-label">Email</label>
+                    <label for="email" class="col-form-label">Email</label>
                 </div>
                 <div class="col-auto">
-                    <input type="email" class="form-control">
+                    <input type="email" name="email" class="form-control" required>
                 </div>
             </div>
             <div class="row mb-3">
                 <div class="col-auto labelRegisterForm">
-                    <label for="" class="col-form-label">Password</label>
+                    <label for="password" class="col-form-label">Password</label>
                 </div>
                 <div class="col-auto">
-                    <input type="password" class="form-control">
+                    <input type="password" name="password" class="form-control" required>
                 </div>
             </div>
             <div class="row mb-4">
                 <div class="col-auto labelRegisterForm">
-                    <label for="" class="col-form-label">Date birth</label>
+                    <label for="datebirth" class="col-form-label">Date birth</label>
                 </div>
                 <div class="col-auto">
-                    <input type="date" class="form-control">
+                    <input type="date" name="datebirth" class="form-control" required>
                 </div>
             </div>
             <div class="row mb-4">
                 <div class="col-auto labelRegisterForm">
-                    <label for="" class="col-form-label">Gender</label>
+                    <label for="gender" class="col-form-label">Gender</label>
                 </div>
                 <div class="col-auto">
-                    <select name="" id="" class="form-select">
-                        <option selected>Select Gender...</option>
-                        <option value="1">Male</option>
-                        <option value="2">Female</option>
+                    <select name="gender" id="" class="form-select" required>
+                        <option value = "" disabled selected>Select Gender...</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
                     </select>
                 </div>
             </div>
             <div class="row g-5 mb-5">
                 <div class="col-auto">
-                    <label for="" class="col-form-label">Roommate Preference</label>
+                    <label for="preference" class="col-form-label">Roommate Preference</label>
                 </div>
                 <div class="col-auto">
-                    <select name="" id="" class="form-select">
-                        <option selected>Select Preference...</option>
-                        <option value="1">Canadian - Male</option>
-                        <option value="2">Canadian - Female</option>
-                        <option value="3">English - Male</option>
-                        <option value="4">English - Female</option>
-                        <option value="5">French - Male</option>
-                        <option value="6">French - Female</option>
-                        <option value="7">Irish - Male</option>
-                        <option value="8">Irish - Female</option>
-                        <option value="9">German - Male</option>
-                        <option value="10">German - Female</option>
-                        <option value="11">Italian - Male</option>
-                        <option value="12">Italian - Female</option>
-                        <option value="13">East Indian - Male</option>
-                        <option value="14">East Indian - Female</option>
-                        <option value="15">Persian - Male</option>
-                        <option value="16">Persian - Female</option>
-                        <option value="17">Arab - Male</option>
-                        <option value="18">Arab - Female</option>
-                        <option value="19">Spanish - Male</option>
-                        <option value="20">Spanish - Female</option>
+                    <select name="preference" id="" class="form-select" required>
+                        <option value="" disabled selected>Select Preference...</option>
+                        <option value="Canadian - Male">Canadian - Male</option>
+                        <option value="Canadian - Female">Canadian - Female</option>
+                        <option value="English - Male">English - Male</option>
+                        <option value="English - Female">English - Female</option>
+                        <option value="French - Male">French - Male</option>
+                        <option value="French - Female">French - Female</option>
+                        <option value="Irish - Male">Irish - Male</option>
+                        <option value="Irish - Female">Irish - Female</option>
+                        <option value="German - Male">German - Male</option>
+                        <option value="German - Female">German - Female</option>
+                        <option value="Italian - Male">Italian - Male</option>
+                        <option value="Italian - Female">Italian - Female</option>
+                        <option value="East Indian - Male">East Indian - Male</option>
+                        <option value="East Indian - Female">East Indian - Female</option>
+                        <option value="Persian - Male">Persian - Male</option>
+                        <option value="Persian - Female">Persian - Female</option>
+                        <option value="Arab - Male">Arab - Male</option>
+                        <option value="Arab - Female">Arab - Female</option>
+                        <option value="Spanish - Male">Spanish - Male</option>
+                        <option value="Spanish - Female">Spanish - Female</option>
                     </select>
                 </div>
             </div>
