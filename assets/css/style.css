@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+body {
+    /* background-color: #76A5AF; */
+    background-image: linear-gradient(270deg, #76A5AF, #355567);
+}
+/* REUSABLE */
+
+
+
+/* ---------- INDEX PAGE ---------- */
+
+
+.indexContainer{
+    /* background: #8FBC8B;  */
+    background-image: linear-gradient(90deg, #8FBC8B, #DFEBDD);
+    height: 80vh;
+    border: 5px solid black;
+    width: 50%;
+    border-radius: 5%;
+    margin: 0 auto;
+    margin-top: 10vh;
+}
+.imgLogo{
+    /* background-color: white; */
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 3.125rem;
+    width: 22%;
+}
+.imgLogo img{
+    width: 100%
+}
+.logoColor{
+    background: -webkit-linear-gradient(#355567,#76A5AF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.titleRC{
+    /* background-color: white; */
+    text-align: center;
+    margin-top: 1.875rem;
+    color: #FFFFFF;
+}
+.titleRC h1{
+    font-size: 42px;
+}
+.titleRC p{
+    font-size: 1.25rem;
+}
+.indexForm{
+    /* background-color: #FFFFFF; */
+    display: flex;
+    flex-wrap: wrap;
+    height: 300px;
+    width: 65%;
+    margin: 0 auto;
+    margin-top: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.indexForm div{
+    margin-bottom: 30px;
+    width: 90%;
+    height: 40px;
+}
+.indexForm div input{
+    width: 100%;
+    height: 100%;
+    border: 2px solid black;
+}
+.indexButtons{
+    /* background: black; */
+    margin-top: 20px;
+}
+.logInBtn{
+    width: 30%;
+    background: #76A5AF;
+    padding: .75rem 0;
+    margin-left: 10%;
+    margin-right: 20%;
+    border: 2px solid black;
+}
+.signUpBtn{
+    width: 30%;
+    background: #FFFFFF;
+    padding: .9375rem 0;
+    color: #000000;
+    border: 2px solid black;
+}
+
+/* REGISTER PAGE */
+
+.registerContainer{
+    height: 90vh;
+    margin: 0 auto;
+    width: 95%;
+}
+
+.registerForm{
+    color: #EEEEEE;
+    /* border: 2px solid black; */
+    margin-top: 4.375rem;
+    margin-left: 40px;
+}
+.registerForm input{
+    width: 28.125rem;
+}
+.labelRegisterForm{
+    /* border: 2px solid black; */
+    width: 180px;
+}
+
+.registerBtn{
+    width: 10%;
+    background: #76A5AF;
+    padding: .75rem 0;
+    margin-left: 0%;
+    margin-right: 5%;
+    border: 2px solid black;
+}
+
+.anchorText{
+    color: #EEEEEE;
+}
