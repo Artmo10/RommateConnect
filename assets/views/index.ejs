@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,400&display=swap" rel="stylesheet">
+    <title>RoommateConnect</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <main>
+        <div class="indexContainer">
+            <div class="imgLogo">
+                <img src="./img/RC logo.png" alt="RoommateConnect Logo">
+            </div>
+            <section class="titleRC">
+                <h1>Roommate<span class="logoColor">Connect</span></h1>
+                <p><i>Unlock the Perfect Roommate!</i></p>
+            </section>
+            <div class="loginStatus">
+                <% if (msg) { %>
+                <p><%= msg %></p>
+                <% } %>
+            </div>
+            <form action="/" method="POST" class="indexForm">
+                <div>
+                    <input type="email" name="login_email" class="form-control" placeholder="Email" required>
+                </div>
+                <div>
+                    <input type="password" name="login_password" class="form-control" placeholder="Password" required>
+                </div>
+                <div class="indexButtons">
+                    <button type="submit" class="logInBtn btn btn-primary">Log In</button>
+                    <a href="/register" class="signUpBtn btn btn-light">Sign Up</a>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

@@ -93,7 +93,12 @@ body {
     color: #000000;
     border: 2px solid black;
 }
-
+.loginStatus {
+    font-size: 1.375rem;
+    font-weight: 600;
+    color: #FFFF99;
+    text-align: center;
+}
 /* REGISTER PAGE */
 
 .registerContainer{
@@ -128,3 +133,19 @@ body {
 .anchorText{
     color: #EEEEEE;
 }
+
+.registerStatus{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #FFFF99;
+    margin-left: 3.125rem;
+}
+
+/* DASHBOARD PAGE */
+
+.dashboardContainer{
+    height: 90vh;
+    margin: 0 auto;
+    width: 95%;
+}
+
