@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,400&display=swap" rel="stylesheet">
+    <title>Account</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <main class="registerContainer">
+        <section class="titleRegister">
+            <h1 class="titleRC">Update your info</h1>
+        </section>
+        <div class="registerStatus">
+            <% if (error) { %>
+                <p>Error: <%= error %></p>
+            <% } else if (success) { %>
+                <p><%= success %></p>
+            <% } %>
+        </div>
+        <form action="/account" method="POST" enctype="multipart/form-data" class="registerForm">
+            <div class="row mb-4 ">
+                <div class="col-auto labelRegisterForm">
+                    <label for="firstName" class="col-form-label">First Name</label>
+                </div>
+                <div class="col-auto">
+                    <input type="text" name="firstName" class="form-control" required value="<%= user.first_name %>">
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-auto labelRegisterForm">
+                    <label for="lastName" class="col-form-label">Last Name</label>
+                </div>
+                <div class="col-auto">
+                    <input type="text" name="lastName" class="form-control" required value="<%= user.last_name %>">
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-auto labelRegisterForm">
+                    <label for="email" class="col-form-label">Email</label>
+                </div>
+                <div class="col-auto">
+                    <input type="email" name="email" class="form-control" required value="<%= user.email %>">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-auto labelRegisterForm">
+                    <label for="password" class="col-form-label">Password</label>
+                </div>
+                <div class="col-auto">
+                    <input type="password" name="password" class="form-control" required value="<%= user.password %>">
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-auto labelRegisterForm">
+                    <label for="birthdate" class="col-form-label">Birth date</label>
+                </div>
+                <div class="col-auto">
+                    <input type="date" name="birthdate" class="form-control" required value="<%= (new Date(user.birthdate)).toISOString().split('T')[0] %>">
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-auto labelRegisterForm">
+                    <label for="gender" class="col-form-label">Gender</label>
+                </div>
+                <div class="col-auto">
+                    <select name="gender" id="" class="form-select" required>
+                        <option value = "" disabled>Select Gender...</option>
+                        <option value="Male" <%= user.gender === 'Male' ? 'selected' : '' %>>Male</option>
+                        <option value="Female" <%= user.gender === 'Female' ? 'selected' : '' %>>Female</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row g-5 mb-4">
+                <div class="col-auto">
+                    <label for="preference" class="col-form-label">Roommate Preference</label>
+                </div>
+                <div class="col-auto">
+                    <select name="preference" id="" class="form-select" required>
+                        <option value="" disabled>Select Preference...</option>
+                        <option value="Canadian - Male" <%= user.roommate_preference === 'Canadian - Male' ? 'selected' : '' %>>Canadian - Male</option>
+                        <option value="Canadian - Female" <%= user.roommate_preference === 'Canadian - Female' ? 'selected' : '' %>>Canadian - Female</option>
+                        <option value="English - Male" <%= user.roommate_preference === 'English - Male' ? 'selected' : '' %>>English - Male</option>
+                        <option value="English - Female" <%= user.roommate_preference === 'English - Female' ? 'selected' : '' %>>English - Female</option>
+                        <option value="French - Male" <%= user.roommate_preference === 'French - Male' ? 'selected' : '' %>>French - Male</option>
+                        <option value="French - Female" <%= user.roommate_preference === 'French - Female' ? 'selected' : '' %>>French - Female</option>
+                        <option value="Irish - Male" <%= user.roommate_preference === 'Irish - Male' ? 'selected' : '' %>>Irish - Male</option>
+                        <option value="Irish - Female" <%= user.roommate_preference === 'Irish - Female' ? 'selected' : '' %>>Irish - Female</option>
+                        <option value="German - Male" <%= user.roommate_preference === 'German - Male' ? 'selected' : '' %>>German - Male</option>
+                        <option value="German - Female" <%= user.roommate_preference === 'German - Female' ? 'selected' : '' %>>German - Female</option>
+                        <option value="Italian - Male" <%= user.roommate_preference === 'Italian - Male' ? 'selected' : '' %>>Italian - Male</option>
+                        <option value="Italian - Female" <%= user.roommate_preference === 'Italian - Female' ? 'selected' : '' %>>Italian - Female</option>
+                        <option value="East Indian - Male" <%= user.roommate_preference === 'East Indian - Male' ? 'selected' : '' %>>East Indian - Male</option>
+                        <option value="East Indian - Female" <%= user.roommate_preference === 'East Indian - Female' ? 'selected' : '' %>>East Indian - Female</option>
+                        <option value="Persian - Male" <%= user.roommate_preference === 'Persian - Male' ? 'selected' : '' %>>Persian - Male</option>
+                        <option value="Persian - Female" <%= user.roommate_preference === 'Persian - Female' ? 'selected' : '' %>>Persian - Female</option>
+                        <option value="Arab - Male" <%= user.roommate_preference === 'Arab - Male' ? 'selected' : '' %>>Arab - Male</option>
+                        <option value="Arab - Female" <%= user.roommate_preference === 'Arab - Female' ? 'selected' : '' %>>Arab - Female</option>
+                        <option value="Spanish - Male" <%= user.roommate_preference === 'Spanish - Male' ? 'selected' : '' %>>Spanish - Male</option>
+                        <option value="Spanish - Female" <%= user.roommate_preference === 'Spanish - Female' ? 'selected' : '' %>>Spanish - Female</option>
+                    </select>
+                </div>
+                
+            </div>
+            
+            <div class="row mb-4">
+                <div class="col-auto labelRegisterForm">
+                    <label for="picture" class="col-form-label">Picture</label>
+                </div>
+                <div class="col-auto">
+                    <input type="file" name="picture" accept="image/*" class="form-control">
+                </div>
+            </div>
+            
+            <div class="row mb-5">
+                <div class="col-auto labelRegisterForm">
+                    <label for="info" class="col-form-label">Additional Info</label>
+                </div>
+                <div class="col-auto">
+                    <input type="text" name="info" class="form-control">
+                </div>
+            </div>
+            <button type="submit" class="registerBtn btn btn-primary">Update</button>
+            <a href="/profile" class="anchorText">Go to Profile Page</a>
+            
+        </form>
+    </main>
+</body>
+</html>

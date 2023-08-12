@@ -19,7 +19,7 @@ body {
     /* background: #8FBC8B;  */
     background-image: linear-gradient(90deg, #8FBC8B, #DFEBDD);
     height: 80vh;
-    border: 5px solid black;
+    border: .3125rem solid black;
     width: 50%;
     border-radius: 5%;
     margin: 0 auto;
@@ -29,7 +29,7 @@ body {
     /* background-color: white; */
     justify-content: center;
     margin: 0 auto;
-    margin-top: 3.125rem;
+    margin-top: 50px;
     width: 22%;
 }
 .imgLogo img{
@@ -43,40 +43,40 @@ body {
 .titleRC{
     /* background-color: white; */
     text-align: center;
-    margin-top: 1.875rem;
+    margin-top: 30px;
     color: #FFFFFF;
 }
 .titleRC h1{
-    font-size: 42px;
+    font-size: 2.625rem;
 }
 .titleRC p{
-    font-size: 1.25rem;
+    font-size: 20px;
 }
 .indexForm{
     /* background-color: #FFFFFF; */
     display: flex;
     flex-wrap: wrap;
-    height: 300px;
+    height: 18.75rem;
     width: 65%;
     margin: 0 auto;
-    margin-top: 20px;
+    margin-top: 1.25rem;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 .indexForm div{
-    margin-bottom: 30px;
+    margin-bottom: 1.875rem;
     width: 90%;
-    height: 40px;
+    height: 2.5rem;
 }
 .indexForm div input{
     width: 100%;
     height: 100%;
-    border: 2px solid black;
+    border: .125rem solid black;
 }
 .indexButtons{
     /* background: black; */
-    margin-top: 20px;
+    margin-top: 1.25rem;
 }
 .logInBtn{
     width: 30%;
@@ -84,14 +84,14 @@ body {
     padding: .75rem 0;
     margin-left: 10%;
     margin-right: 20%;
-    border: 2px solid black;
+    border: .125rem solid black;
 }
 .signUpBtn{
     width: 30%;
     background: #FFFFFF;
     padding: .9375rem 0;
     color: #000000;
-    border: 2px solid black;
+    border: .125rem solid black;
 }
 .loginStatus {
     font-size: 1.375rem;
@@ -109,25 +109,25 @@ body {
 
 .registerForm{
     color: #EEEEEE;
-    /* border: 2px solid black; */
+    /* border: .125rem solid black; */
     margin-top: 4.375rem;
-    margin-left: 40px;
+    margin-left: 2.5rem;
 }
 .registerForm input{
     width: 28.125rem;
 }
 .labelRegisterForm{
-    /* border: 2px solid black; */
-    width: 180px;
+    /* border: .125rem solid black; */
+    width: 11.25rem;
 }
 
 .registerBtn{
     width: 10%;
     background: #76A5AF;
-    padding: .75rem 0;
+    padding: 12px 0;
     margin-left: 0%;
     margin-right: 5%;
-    border: 2px solid black;
+    border: .125rem solid black;
 }
 
 .anchorText{
@@ -141,11 +141,84 @@ body {
     margin-left: 3.125rem;
 }
 
-/* DASHBOARD PAGE */
-
-.dashboardContainer{
-    height: 90vh;
-    margin: 0 auto;
-    width: 95%;
+/* PROFILE PAGE */
+/* header */
+.dashboardHeader{
+    height: 15vh;
+    display: flex;
+    border-bottom: .5rem solid black;
 }
-
+.headerLogo{
+    height: 100%;
+    margin: .3125rem 1.875rem;
+}
+.headerLogo Img{
+    height: 90%;
+}
+.rcSlogan{
+    display: flex;
+    letter-spacing: .5rem;
+    color: #50AEA3;
+    font-size: 1.5rem;
+    align-items: center;
+    margin-left: 1.25rem;
+    font-weight: bolder;
+}
+/* ---------- main container ----------*/
+.dashboardContainer{
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+/* menu container */
+.dashboardMenu{
+    display: flex;
+    width: 20%;
+    border-right: .25rem solid black;
+    flex-direction: column;
+    align-items: center;
+}
+.userImgContainer{
+    margin-top: 3.75rem;
+}
+.userImgContainer Img{
+    height: 12.5rem;
+    width: 12.5rem;
+    border-radius: 50%;
+    /* object-fit: cover; */
+    background: #8FBC8B;
+}
+.accountBtn a{
+    margin-top: 6.875rem;
+    padding: 1.25rem 2.5rem;
+    font-size: 1.125rem;
+}
+.logoutBtn a{
+    margin-top: 2.5rem;
+    padding: 1.25rem 2.75rem;
+    font-size: 1.125rem;
+}
+/* hero container */
+.dashboardHero{
+    width: 80%;
+    background-color: aliceblue;
+}
+.userDataHero{
+    text-align: justify;
+    margin: 2.5rem;
+}
+.roommatesDataSection{
+    margin: 2.5rem;
+}
+.roommatesDataTable{
+    width: 100%;
+    border-collapse: collapse;
+}
+.roommatesDataTable th, td {
+    padding: .5rem;
+    text-align: left;
+    border-bottom: .0625rem solid #ddd;
+}
+.roommatesDataTable th {
+    background-color: #76A5AF;
+}
